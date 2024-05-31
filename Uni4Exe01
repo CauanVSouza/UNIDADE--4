@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Uni4Exe01 {
+    public static void main(String[] args) {
+
+        Scanner teclado = new Scanner(System.in);
+        
+        System.out.print("Horas trabalhadas no mês: ");
+        float nHoras = teclado.nextFloat();
+        System.out.print("Valor da hora: ");
+        float vHora = teclado.nextFloat();
+        
+        float sTotal = nHoras * vHora;
+
+        if (nHoras > 160) {
+
+            float sExtra = (nHoras - 160) * (vHora / 2);
+            sTotal = sTotal + sExtra;
+
+        }
+
+        System.out.printf("O salário total é: %.2f%n", sTotal);
+    }
+
+}
